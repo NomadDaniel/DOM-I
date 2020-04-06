@@ -40,5 +40,15 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+logo.setAttribute("src", siteContent["nav"]["img-src"])
+// --------Note to self - reminder that I changed the "let" to "const" for the logo. Why was "let" used?----------//
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+
