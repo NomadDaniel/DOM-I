@@ -1,5 +1,3 @@
-// meaningless comment to initiate pull request
-
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -39,16 +37,63 @@ const siteContent = {
   },
 };
 
+// --------------------
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"])
 // --------Note to self - reminder that I changed the "let" to "const" for the logo. Why was "let" used?----------//
 
+
+// My first step ==> get the other 2 images working
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+// -----------------------------------------------------
+
+// Now, follow the HTML from top to bottom
+// Nav.........
+const navItems = document.querySelectorAll('nav a');
+navItems[0].textContent = siteContent['nav']['nav-item-1'] 
+navItems[1].textContent = siteContent['nav']['nav-item-2'] 
+navItems[2].textContent = siteContent['nav']['nav-item-3'] 
+navItems[3].textContent = siteContent['nav']['nav-item-4'] 
+navItems[4].textContent = siteContent['nav']['nav-item-5'] 
+navItems[5].textContent = siteContent['nav']['nav-item-6'] 
+// -------------------------------------------------------
+
+// cta section
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent['cta']['h1']
+// ctaH1.textContent = siteContent['cta']['h1']['button']
+
+
+const ctaButton = document.querySelector('.cta button');
+ctaButton.textContent = siteContent['cta']['button']
+
+// -------------------------------------------------------
+// main-content
+// 
+const featuresH4 = document.querySelector('.text-content h4');
+featuresH4.textContent = siteContent['main-content']['features-h4']
+
+const featuresContent = document.querySelector('.text-content p')
+featuresContent.textContent = siteContent['main-content']['features-content']
+
+// const aboutH4 = document.querySelector('.text-content h4');
+// aboutH4.textContent = siteContent['main-content']['about-h4']
+
+// const aboutContent = document.querySelector('.text-content p')
+// aboutContent.textContent = siteContent['main-content']['about-content']
+
+
+
+//---------------------------------------------------------
+
+// 
+
+
 
 
 
