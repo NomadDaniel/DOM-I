@@ -44,6 +44,8 @@ logo.setAttribute("src", siteContent["nav"]["img-src"])
 // --------Note to self - reminder that I changed the "let" to "const" for the logo. Why was "let" used?----------//
 
 
+// **********MY CODE BELOW******************
+
 // My first step ==> get the other 2 images working
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
@@ -63,36 +65,50 @@ navItems[4].textContent = siteContent['nav']['nav-item-5']
 navItems[5].textContent = siteContent['nav']['nav-item-6'] 
 // -------------------------------------------------------
 
-// cta section
+
+// cta w button...
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent['cta']['h1']
-// ctaH1.textContent = siteContent['cta']['h1']['button']
-
 
 const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent['cta']['button']
-
 // -------------------------------------------------------
-// main-content
-// 
-const featuresH4 = document.querySelector('.text-content h4');
-featuresH4.textContent = siteContent['main-content']['features-h4']
-
-const featuresContent = document.querySelector('.text-content p')
-featuresContent.textContent = siteContent['main-content']['features-content']
-
-// const aboutH4 = document.querySelector('.text-content h4');
-// aboutH4.textContent = siteContent['main-content']['about-h4']
-
-// const aboutContent = document.querySelector('.text-content p')
-// aboutContent.textContent = siteContent['main-content']['about-content']
 
 
+// main and bottom-content h4's handled together...
+const contentH4s = document.querySelectorAll('.text-content h4');
+contentH4s[0].textContent = siteContent['main-content']['features-h4']
+contentH4s[1].textContent = siteContent['main-content']['about-h4']
+contentH4s[2].textContent = siteContent['main-content']['services-h4']
+contentH4s[3].textContent = siteContent['main-content']['product-h4']
+contentH4s[4].textContent = siteContent['main-content']['vision-h4']
 
+// main and bottom-content p's handled together...
+
+const contentPs = document.querySelectorAll('.text-content p')
+contentPs[0].textContent = siteContent['main-content']['features-content']
+contentPs[1].textContent = siteContent['main-content']['about-content']
+contentPs[2].textContent = siteContent['main-content']['services-content']
+contentPs[3].textContent = siteContent['main-content']['product-content']
+contentPs[4].textContent = siteContent['main-content']['vision-content']
 //---------------------------------------------------------
 
-// 
+//contact h4...
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4']
 
+// contact ps...
+const contactPs = document.querySelectorAll('.contact p');
+contactPs[0].textContent = siteContent['contact']['address']
+contactPs[1].textContent = siteContent['contact']['phone']
+contactPs[2].textContent = siteContent['contact']['email']
+// ---------------------------------------------------------
+
+
+// footer p
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright']
+// --------------------------------------------------------
 
 
 
