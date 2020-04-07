@@ -61,7 +61,9 @@ const navContents = Object.values(siteContent.nav)
 function navLoop() {
   for (let i = 0; i < navbar.length; i++) {
     navbar[i].textContent = navContents[i];
-    navbar[i].style.color = 'blue';
+    navbar[i].style.color = 'purple';
+    navbar[i].style.fontWeight = 'bold';
+    navbar[i].style.fontSize = '1.5rem';
   }
 }
 navLoop();
