@@ -56,19 +56,31 @@ middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 // Now, follow the HTML from top to bottom
 // Nav.........
-const navItems = document.querySelectorAll('nav a');
-navItems[0].textContent = siteContent['nav']['nav-item-1'] 
-navItems[1].textContent = siteContent['nav']['nav-item-2'] 
-navItems[2].textContent = siteContent['nav']['nav-item-3'] 
-navItems[3].textContent = siteContent['nav']['nav-item-4'] 
-navItems[4].textContent = siteContent['nav']['nav-item-5'] 
-navItems[5].textContent = siteContent['nav']['nav-item-6'] 
-// -------------------------------------------------------
+const navbar = document.querySelectorAll('nav a')
+const navContents = Object.values(siteContent.nav)
+function navLoop() {
+  for (let i = 0; i < navbar.length; i++) {
+    navbar[i].textContent = navContents[i];
+    navbar[i].style.color = 'blue';
+  }
+}
+navLoop();
+
+// const navItems = document.querySelectorAll('nav a');
+// navItems[0].textContent = siteContent['nav']['nav-item-1'] 
+// navItems[1].textContent = siteContent['nav']['nav-item-2'] 
+// navItems[2].textContent = siteContent['nav']['nav-item-3'] 
+// navItems[3].textContent = siteContent['nav']['nav-item-4'] 
+// navItems[4].textContent = siteContent['nav']['nav-item-5'] 
+// navItems[5].textContent = siteContent['nav']['nav-item-6'] 
+// // -------------------------------------------------------
+
 
 
 // cta w button...
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent['cta']['h1']
+ctaH1.style.color = 'green';//easy stretch goal style change
 
 const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent['cta']['button']
@@ -77,6 +89,11 @@ ctaButton.textContent = siteContent['cta']['button']
 
 // main and bottom-content h4's handled together...
 const contentH4s = document.querySelectorAll('.text-content h4');
+// for (let i = 0; i < contentH4s.length; i++) {
+//   const contents = Object.value(contents)
+//   contentH4s[i].textContent = contents[i]
+// }
+
 contentH4s[0].textContent = siteContent['main-content']['features-h4']
 contentH4s[1].textContent = siteContent['main-content']['about-h4']
 contentH4s[2].textContent = siteContent['main-content']['services-h4']
