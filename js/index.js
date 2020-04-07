@@ -86,14 +86,22 @@ const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent['cta']['button']
 // -------------------------------------------------------
 
+// Added events to study for tomorrow
+ctaButton.addEventListener('click', (event) => {
+  alert('You Clicked the Get Started Button...you must be awesome!')
+})
+
+ctaButton.addEventListener('focus', (event) => {
+  event.target.style.background = 'darkorange';    
+}, true);
+
+ctaButton.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+}, true);
+// --------------------------------------------------------
 
 // main and bottom-content h4's handled together...
 const contentH4s = document.querySelectorAll('.text-content h4');
-// for (let i = 0; i < contentH4s.length; i++) {
-//   const contents = Object.value(contents)
-//   contentH4s[i].textContent = contents[i]
-// }
-
 contentH4s[0].textContent = siteContent['main-content']['features-h4']
 contentH4s[1].textContent = siteContent['main-content']['about-h4']
 contentH4s[2].textContent = siteContent['main-content']['services-h4']
