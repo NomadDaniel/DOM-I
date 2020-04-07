@@ -77,8 +77,6 @@ navLoop();
 // navItems[5].textContent = siteContent['nav']['nav-item-6'] 
 // // -------------------------------------------------------
 
-
-
 // cta w button...
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent['cta']['h1']
@@ -86,6 +84,9 @@ ctaH1.style.color = 'green';//easy stretch goal style change
 
 const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent['cta']['button']
+ctaButton.style.fontSize = "1.5rem";
+ctaButton.style.fontWeight = "bold";
+// ctaButton.style.scale = 5;
 // -------------------------------------------------------
 
 // Added events to study for tomorrow
